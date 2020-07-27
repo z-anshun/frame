@@ -66,7 +66,7 @@ func (e *Engine) handle(m string, url string, handlers []HandlerFunc) {
 	//处理handlers
 
 	if len(e.middle) != 0 {
-		handlers = append(handlers, e.middle...)
+		handlers = append(e.middle,handlers...)
 	}
 
 	t := e.ts.getMonth(m)
