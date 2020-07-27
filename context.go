@@ -40,7 +40,7 @@ func NewContext(w http.ResponseWriter, r *http.Request) *Context {
 }
 
 func (c *Context) WriteString(str string) {
-
+	c.ResponseWriter.Write([]byte(str))
 }
 
 func (c *Context) Abort() {
